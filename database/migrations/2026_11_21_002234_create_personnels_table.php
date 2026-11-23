@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('matricule')->unique(); // Ex: PNH-2022-1105
             $table->string('nom');
             $table->string('prenom');
+            $table->enum('sexe', ['M', 'F']);
+            $table->date('date_naissance');
             $table->string('grade');
+            $table->string('adresse');
+            $table->string('telephone');
             $table->integer('solde_conges')->default(20);
             $table->timestamps();
         });
